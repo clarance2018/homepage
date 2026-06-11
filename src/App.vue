@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import ParticleCanvas from './components/effects/ParticleCanvas.vue'
+import MouseGlow from './components/effects/MouseGlow.vue'
 import Hero from './components/sections/Hero.vue'
+import About from './components/sections/About.vue'
 import Focus from './components/sections/Focus.vue'
 import Garden from './components/sections/Garden.vue'
+import Principles from './components/sections/Principles.vue'
 import Philosophy from './components/sections/Philosophy.vue'
+import Contact from './components/sections/Contact.vue'
 import Footer from './components/sections/Footer.vue'
 
 const isDarkMode = ref(false)
@@ -24,6 +29,10 @@ const toggleTheme = () => {
 
 <template>
   <div>
+    <!-- 背景效果 -->
+    <ParticleCanvas />
+    <MouseGlow />
+
     <!-- 背景光晕 -->
     <div class="bg-blur">
       <div class="blur blur1"></div>
@@ -41,10 +50,14 @@ const toggleTheme = () => {
       </svg>
     </button>
 
+    <!-- 页面内容 -->
     <Hero />
+    <About />
     <Focus />
     <Garden />
+    <Principles />
     <Philosophy />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -54,7 +67,7 @@ const toggleTheme = () => {
 .bg-blur {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
 }
 
@@ -68,7 +81,7 @@ const toggleTheme = () => {
 .blur1 {
   width: 500px;
   height: 500px;
-  background: var(--blue);
+  background: #4f8cff;
   top: -120px;
   left: -100px;
 }
@@ -76,7 +89,7 @@ const toggleTheme = () => {
 .blur2 {
   width: 600px;
   height: 600px;
-  background: var(--green);
+  background: #22c55e;
   right: -150px;
   top: 300px;
 }
