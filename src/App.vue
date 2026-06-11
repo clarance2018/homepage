@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import ParticleCanvas from './components/effects/ParticleCanvas.vue'
 import MouseGlow from './components/effects/MouseGlow.vue'
+import RedirectBanner from './components/effects/RedirectBanner.vue'
 import Hero from './components/sections/Hero.vue'
 import About from './components/sections/About.vue'
 import Focus from './components/sections/Focus.vue'
@@ -59,6 +60,9 @@ const toggleTheme = () => {
     <Philosophy />
     <Contact />
     <Footer />
+
+    <!-- 跳转提示 -->
+    <RedirectBanner />
   </div>
 </template>
 
